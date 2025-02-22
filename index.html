@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Lidia's Birthday!</title>
+
+    <style>
+
+        /* 保持之前提供的所有CSS样式 */
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 保持之前提供的所有HTML内容 -->
+
+    <script>
+
+        // 使用优化后的音频代码
+
+        const sound = new Howl({
+
+            src: ['music.mp3'],
+
+            volume: 0.7,
+
+            onplayerror: function() {
+
+                sound.once('unlock', function() {
+
+                    sound.play();
+
+                });
+
+            }
+
+        });
+
+        document.getElementById('confetti-btn').addEventListener('click', () => {
+
+            sound.play();
+
+            // 保持原有特效代码
+
+        });
+
+    </script>
+
+</body>
+
+</html>
